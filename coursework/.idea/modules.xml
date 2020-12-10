@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../FrameworkTraining/coursework/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/../FrameworkTraining/coursework/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../FrameworkTraining/coursework/bookshop/bookshop.iml" filepath="$PROJECT_DIR$/../FrameworkTraining/coursework/bookshop/bookshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../FrameworkTraining/coursework/coursework.iml" filepath="$PROJECT_DIR$/../FrameworkTraining/coursework/coursework.iml" />
+    </modules>
+  </component>
+</project>
