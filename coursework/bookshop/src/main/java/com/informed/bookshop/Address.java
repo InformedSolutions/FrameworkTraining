@@ -56,6 +56,14 @@ public class Address {
         this.postcode = postcode;
     }
 
+    public String getAddressString() {
+        return  number +
+                " " + street +
+                ", " + city  +
+                ", " + county  +
+                ", " + postcode;
+    }
+
     @Override
     public String toString() {
         return "Address (" +

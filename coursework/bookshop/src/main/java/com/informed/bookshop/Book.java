@@ -1,35 +1,21 @@
 package com.informed.bookshop;
 
-public class Book {
+public class Book extends Product{
 
-    private String title;
-    private double price;
+    private static int bookCount;
+
+    public static int getBookCount() {
+        return bookCount;
+    }
+
     private Author author;
     private Publisher publisher;
-    private double saleDiscount;
 
     public Book(String title, double price, Author author, Publisher publisher) {
-        this.title = title;
-        this.price = price;
+        super(title, price);
         this.author = author;
         this.publisher = publisher;
-        this.saleDiscount = 0d;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
+        bookCount++;
     }
 
     public Author getAuthor() {
@@ -40,35 +26,23 @@ public class Book {
         return publisher;
     }
 
-    public double getSaleDiscount() {
-        return saleDiscount;
-    }
-
-    public void setSaleDiscount(double saleDiscount) {
-        this.saleDiscount = saleDiscount;
-    }
-
-    private double calculateSalePrice() {
-            return price - (price * (saleDiscount/100));
-    }
-
-    public void printSalePrice() {
-        System.out.printf("Sale price of book: £%.2f\n", this.calculateSalePrice());
-    }
-
-    public void printSalePrice(double saleDiscount) {
-        this.setSaleDiscount(saleDiscount);
-        System.out.printf("Sale price of book: £%.2f\n", this.calculateSalePrice());
-
-    }
-
     @Override
     public String toString() {
         return "Book(" +
-                 title +
-                ", £" + price +
+                 this.getTitle() +
+                ", £" + this.getPrice() +
                 ", " + author +
                 ", " + publisher +
                 ')';
+    }
+
+    public void printer() {
+        System.out.println("┍---------------┑");
+        System.out.println("| ~~~~~~|~~~~~~ |");
+        System.out.println("| ~~~~~~|~~~~~~ |");
+        System.out.println("| ~~~~~~|~~~~~~ |");
+        System.out.println("| ~~~~~~|~~~~~~ |");
+        System.out.println("┕---------------┙");
+        System.out.println(getTitle() + " by " + getAuthor().getName());
     }
 }

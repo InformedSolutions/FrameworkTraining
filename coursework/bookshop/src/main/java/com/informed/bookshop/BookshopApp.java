@@ -11,13 +11,13 @@ public class BookshopApp {
         Address authorAddress = new Address(10, "High Street",
                 "Any Town", "Somerset",
                 "SA1 23Z");
-        Author author = new Author("Pete Smith", authorAddress);
+        Author author = new Author("Pete Smith", authorAddress, "Technical");
         Address publisherAddress = new Address(1, "Main Street",
                 "Some City", "Kent",
                 "KA1 43A");
         Publisher publisher =
-                new Publisher("Tech Books Publishing Ltd.",
-                        publisherAddress);
+                new Publisher("Bill Smith",
+                        publisherAddress, "Tech Books Publishing Ltd.");
         Book book = new Book("Java Unleashed",15.95,
                 author, publisher);
         System.out.println("Book: " + book);
@@ -26,6 +26,18 @@ public class BookshopApp {
         book.printSalePrice();
         book.printSalePrice(50);
         book.printSalePrice(100);
+
+        Book book2 = new Book("Java For Professionals", 12.55, author, publisher);
+        System.out.println("\nBook2: " + book2);
+        System.out.println("Book Instance Count: " + Book.getBookCount());
+        book2.printer();
+
+        Sales salesProduct = book;
+        salesProduct.setSaleDiscount(10.0);
+        salesProduct.printSalePrice();
+
+        author.prettyPrint();
+        publisher.prettyPrint();
 
     }
 
