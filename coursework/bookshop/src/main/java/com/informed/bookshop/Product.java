@@ -7,7 +7,7 @@ public abstract class Product implements Sales {
 
     public Product(String title, double price) {
         this.title = title;
-        this.price = price;
+        this.setPrice(price);
     }
 
     public String getTitle() {
@@ -23,7 +23,11 @@ public abstract class Product implements Sales {
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        if (price > 0) {
+            this.price = price;
+        } else {
+            throw new BookshopException("Invalid Price");
+        }
     }
 
     public double getSaleDiscount() {
@@ -34,7 +38,7 @@ public abstract class Product implements Sales {
         this.saleDiscount = saleDiscount;
     }
 
-    private double calculateSalePrice() {
+    public double calculateSalePrice() {
         return price - (price * (saleDiscount/100));
     }
 

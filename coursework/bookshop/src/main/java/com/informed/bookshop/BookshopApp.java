@@ -8,9 +8,7 @@ public class BookshopApp {
         System.out.println("Welcome to the Java Bookshop");
         System.out.println("============================");
         Bookshop bookshop = new Bookshop();
-        for (Book book : bookshop.getBooks()) {
-            System.out.println("Book: " + book);
-        }
+        bookshop.printBooks();
         if (bookshop.getBooks().size() > 0) {
             Book book1 = bookshop.getBooks().get(0);
             book1.setSaleDiscount(10.0);
@@ -27,11 +25,14 @@ public class BookshopApp {
 
         bookshop.printRandomBook();
         System.out.println(bookshop.totalBooks());
-        System.out.println(bookshop.getBookAtIndex(3));
 
-        bookshop.getBookAtIndex(3).printer();
-
-
+        Book bookAtIndex = bookshop.getBookAtIndex(3);
+        System.out.println(bookAtIndex);
+        if (bookAtIndex != null) {
+            bookAtIndex.printer();
+        }
+        System.out.println("============================");
+        bookshop.filterPrice(13d, '<');
     }
 
 }

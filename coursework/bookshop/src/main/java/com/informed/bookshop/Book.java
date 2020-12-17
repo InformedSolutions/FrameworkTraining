@@ -37,12 +37,11 @@ public class Book extends Product{
     }
 
     public void printer() {
-        System.out.println("┍---------------┑");
-        System.out.println("| ~~~~~~|~~~~~~ |");
-        System.out.println("| ~~~~~~|~~~~~~ |");
-        System.out.println("| ~~~~~~|~~~~~~ |");
-        System.out.println("| ~~~~~~|~~~~~~ |");
-        System.out.println("┕---------------┙");
-        System.out.println(getTitle() + " by " + getAuthor().getName());
+            System.out.println("┍---------------┑");
+            System.out.println("| ~~~~~~|~~~~~~ | " + getTitle());
+            System.out.println("| ~~~~~~|~~~~~~ | by");
+            System.out.println("| ~~~~~~|~~~~~~ | " + getAuthor().getName());
+            System.out.println("| ~~~~~~|~~~~~~ |");
+            System.out.println("┕---------------┙");
     }
 }
