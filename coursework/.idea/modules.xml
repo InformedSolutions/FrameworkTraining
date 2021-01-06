@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../FrameworkTraining/coursework/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/../FrameworkTraining/coursework/HelloWorld/HelloWorld.iml" />
       <module fileurl="file://$PROJECT_DIR$/bookshop/bookshop.iml" filepath="$PROJECT_DIR$/bookshop/bookshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bookshop/bookshop-graphql-service/bookshop-graphql-service.iml" filepath="$PROJECT_DIR$/bookshop/bookshop-graphql-service/bookshop-graphql-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bookshop/bookshop-service/bookshop-service.iml" filepath="$PROJECT_DIR$/bookshop/bookshop-service/bookshop-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/../FrameworkTraining/coursework/coursework.iml" filepath="$PROJECT_DIR$/../FrameworkTraining/coursework/coursework.iml" />
     </modules>
   </component>

@@ -6,11 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bookshop" />
+        <module name="bookshop-service" />
+        <module name="bookshop-graphql-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="bookService" target="8" />
       <module name="bookshop" target="8" />
+      <module name="bookshop-graphql-service" target="8" />
+      <module name="bookshop-service" target="8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bookshop-graphql-service" options="-parameters" />
+      <module name="bookshop-service" options="-parameters" />
+    </option>
   </component>
 </project>

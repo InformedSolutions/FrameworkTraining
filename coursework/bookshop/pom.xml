@@ -6,7 +6,12 @@
 
     <groupId>com.informed</groupId>
     <artifactId>bookshop</artifactId>
+    <packaging>pom</packaging>
     <version>0.1-SNAPSHOT</version>
+    <modules>
+        <module>bookshop-service</module>
+        <module>bookshop-graphql-service</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,6 +39,20 @@
             <version>${junit-version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.20</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.2.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.4.15.Final</version>
+        </dependency>
     </dependencies>
-
 </project>
