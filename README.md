@@ -1,2 +1,3 @@
-# FrameworkTraining
-Training Repo
+#Appointments Booking System Project
+
+Team Luke and Rachel 
