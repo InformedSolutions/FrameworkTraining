@@ -34,9 +34,9 @@ A Client has
 *	[ ] Notify a provider of any change in their schedule 
 *	[ ] List all Appointments for a provider this may be current, all for today, in the past or between two specified dates 
 *	[ ] List all appointments for a client this may be current, all for today, in the past or between two specified dates 
-*	Show stats on the number of appointments 
-        * [ ] Cancelled 
-        * [ ] Missed 
-        * [ ] Per provider 
+*	[ ] Show stats on the number of appointments 
+    * Cancelled 
+    * Missed 
+    * Per provider 
  
 The system should provide a web front end, with a service-based server tier and a MySQL database backend. 
