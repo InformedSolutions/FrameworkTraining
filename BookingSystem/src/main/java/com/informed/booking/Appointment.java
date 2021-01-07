@@ -1,5 +1,6 @@
 package com.informed.booking;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -11,12 +12,15 @@ public class Appointment {
 
     @Id
     private int id;
+    @Column(name = "startdatetime")
     private String startDateTime;
+    @Column(name = "enddatetime")
     private String endDateTime;
     private String provider;
     private String client;
     private int cost;
     private String description;
+    @Column(name = "hasclientmissedappointments")
     private Boolean hasClientMissedAppointments;
 
     public Appointment() {}

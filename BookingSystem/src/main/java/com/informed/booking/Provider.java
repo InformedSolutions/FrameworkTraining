@@ -1,5 +1,6 @@
 package com.informed.booking;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -11,6 +12,7 @@ public class Provider {
     @Id
     private int id;
     private String name;
+    @Column(name = "areaofexpertise")
     private String areaOfExpertise;
 
     public Provider() {}

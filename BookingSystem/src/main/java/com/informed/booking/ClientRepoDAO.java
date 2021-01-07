@@ -15,7 +15,7 @@ public class ClientRepoDAO {
     private ClientRepository repo;
 
     public List<Client> getAllClients() {
-        System.out.println("BookingSystem.getClient");
+        System.out.println("BookingSystem.getAllClients");
         Iterable<Client> iterable = repo.findAll();
         List<Client> clients = new ArrayList<>();
         for (Client b : iterable) {

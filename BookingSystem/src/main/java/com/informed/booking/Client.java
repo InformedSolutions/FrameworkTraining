@@ -1,5 +1,6 @@
 package com.informed.booking;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -7,11 +8,14 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "clients")
 public class Client {
+
     @Id
     private int id;
     private String name;
     private String address;
+    @Column(name = "phonenumber")
     private String phoneNumber;
+    @Column(name = "emailaddress")
     private String emailAddress;
 
     public Client() {}
