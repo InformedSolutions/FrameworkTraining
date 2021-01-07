@@ -23,8 +23,8 @@ public class ProviderRepoDAO {
         return providers;
     }
 
-    public void saveProvider(Provider provider) {
-        System.out.println("BookingSystem.saveProvider(" + provider + ")");
+    public void addProvider(Provider provider) {
+        System.out.println("BookingSystem.addProvider(" + provider + ")");
         repo.save(provider);
     }
 

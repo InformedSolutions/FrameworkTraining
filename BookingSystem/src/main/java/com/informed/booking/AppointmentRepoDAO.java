@@ -23,8 +23,8 @@ public class AppointmentRepoDAO {
         return appointments;
     }
 
-    public void saveAppointment(Appointment appointment) {
-        System.out.println("BookingSystem.saveAppointment(" + appointment + ")");
+    public void addAppointment(Appointment appointment) {
+        System.out.println("BookingSystem.addAppointment(" + appointment + ")");
         repo.save(appointment);
     }
 

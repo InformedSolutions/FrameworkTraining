@@ -27,8 +27,8 @@ public class BookingSystem {
 
     //Appointment Linking
 
-    public void saveAppointment(Appointment appointment) {
-        appointmentDAO.saveAppointment(appointment);
+    public void addAppointment(Appointment appointment) {
+        appointmentDAO.addAppointment(appointment);
     }
 
     public void deleteAppointment(Appointment appointment) {
@@ -49,8 +49,8 @@ public class BookingSystem {
 
     //Client Linking
 
-    public void saveClient(Client client) {
-        clientDAO.saveClient(client);
+    public void addClient(Client client) {
+        clientDAO.addClient(client);
     }
 
     public void deleteClient(Client client) {
@@ -71,8 +71,8 @@ public class BookingSystem {
 
     //Provider Linking
 
-    public void saveProvider(Provider provider) {
-        providerDAO.saveProvider(provider);
+    public void addProvider(Provider provider) {
+        providerDAO.addProvider(provider);
     }
 
     public void deleteProvider(Provider provider) {

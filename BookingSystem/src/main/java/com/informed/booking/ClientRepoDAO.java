@@ -23,8 +23,8 @@ public class ClientRepoDAO {
         return clients;
     }
 
-    public void saveClient(Client client) {
-        System.out.println("BookingSystem.saveClient(" + client + ")");
+    public void addClient(Client client) {
+        System.out.println("BookingSystem.addClient(" + client + ")");
         repo.save(client);
     }
 

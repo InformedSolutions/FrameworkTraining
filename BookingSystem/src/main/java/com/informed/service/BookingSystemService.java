@@ -13,36 +13,9 @@ import java.sql.SQLException;
 public class BookingSystemService {
 
     public static void main(String[] args) throws SQLException {
-        System.out.println("Starting Bookshop Service");
+        System.out.println("Starting Booking System Service");
         ConfigurableApplicationContext context = SpringApplication.run(BookingSystemService.class, args);
         System.out.println("Setup finished");
-
-//        BookDAO dao = new BookDAO();
-//        System.out.println("------------------------------------------------------------------");
-//        dao.setup();
-//        List<Book> books = dao.getAllBooks();
-//
-//        for (Book book:books) {
-//            System.out.println(book.toString());
-//
-//        }
-//
-//        dao.saveBook(new Book(9, "Don Quixote", "Adventure","Miguel de Cervantes"));
-//        Book donQuixote = dao.getBookByISBN(9);
-//        System.out.println("------------------------------------------------------------------");
-//        books = dao.getAllBooks();
-//
-//        for (Book book:books) {
-//            System.out.println(book.toString());
-//        }
-//
-//        dao.deleteBook(donQuixote);
-//        System.out.println("------------------------------------------------------------------");
-//        books = dao.getAllBooks();
-//
-//        for (Book book:books) {
-//            System.out.println(book.toString());
-//        }
 
     }
 }
