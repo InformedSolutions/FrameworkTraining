@@ -1,7 +1,7 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/bookingsystem
-    password: sqlroot1!
+    password: Superthing2
     username: root
     driver-class-name: "com.mysql.cj.jdbc.Driver"
 jpa:
