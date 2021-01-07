@@ -9,7 +9,7 @@ import java.util.Optional;
 @Repository
 public interface AppointmentRepository extends CrudRepository<Appointment, Integer> {
 
-    @Query(value = "SELECT * FROM providers WHERE book.title=?1",
+    @Query(value = "SELECT * FROM providers WHERE provider.name=?1",
             nativeQuery = true)
     Optional<Appointment> getAppointmentByName(String name);
 
