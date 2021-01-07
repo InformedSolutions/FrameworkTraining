@@ -45,6 +45,18 @@ public class BookingSystemController {
         this.booker.addAppointment(appointment);
     }
 
+    @GetMapping("appointmentList/client/{clientId}")
+    public List<Appointment> getClientAppointments(@PathVariable int clientId) {
+        System.out.println("BookingSystemController.getClientAppointments(" + clientId + ")");
+        return booker.getClientAppointments(clientId);
+    }
+
+    @GetMapping("appointmentList/provider/{providerId}")
+    public List<Appointment> getProviderAppointments(@PathVariable int providerId) {
+        System.out.println("BookingSystemController.getProviderAppointments(" + providerId + ")");
+        return booker.getProviderAppointments(providerId);
+    }
+
     //Client Mappings
 
     @GetMapping("clientList")

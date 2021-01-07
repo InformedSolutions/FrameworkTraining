@@ -10,8 +10,6 @@ import java.util.Optional;
 @Component
 public class BookingSystem {
 
-    //private List<Book> books = new ArrayList<>();
-
     @Autowired
     private final AppointmentRepoDAO appointmentDAO = new AppointmentRepoDAO();
 
@@ -45,6 +43,18 @@ public class BookingSystem {
 
     public List<Appointment> getAllAppointments() {
         return appointmentDAO.getAllAppointments();
+    }
+
+    public List<Appointment> getClientAppointments(int clientId) {
+        Client client = getClientByID(clientId).orElse(null);
+        String clientName = client.getName();
+        return appointmentDAO.getClientAppointments(clientName);
+    }
+
+    public List<Appointment> getProviderAppointments(int providerId) {
+        Provider provider = getProviderByID(providerId).orElse(null);
+        String providerName = provider.getName();
+        return appointmentDAO.getProviderAppointments(providerName);
     }
 
     //Client Linking

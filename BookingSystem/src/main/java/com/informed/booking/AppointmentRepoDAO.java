@@ -41,4 +41,14 @@ public class AppointmentRepoDAO {
     public Optional<Appointment> getAppointmentByName(String name) {
         return repo.getAppointmentByName(name);
     }
+
+    public List<Appointment> getClientAppointments(String clientName) {
+        System.out.println("BookingSystem.getClientAppointments");
+        return repo.getClientAppointments(clientName);
+    }
+
+    public List<Appointment> getProviderAppointments(String providerName) {
+        System.out.println("BookingSystem.getProviderAppointments");
+        return repo.getProviderAppointments(providerName);
+    }
 }
