@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Appointments Booking System</title>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
@@ -18,7 +18,19 @@
 </head>
 <body>
 
-<<<<<<< HEAD
+<div id="displayArea">
+
+    <table id="appTable" class="styled-table">
+
+    </table>
+
+</div>
+
+
+<div id="appointmentButtons">
+    <input type="button" value="List Appointments" id="listAllAppointments">
+</div>
+
 <div>
     <form id="clientregistryform">
         <legend>Register as a client:</legend>
@@ -27,32 +39,18 @@
         Address: <input type="text" name="address"><br>
         Phone number: <input type="text" name="phoneNumber"><br>
         Email address: <input type="text" name="emailAddress"><br>
-        <input type="submit" value="Submit" id='enter'>
+        <input type="submit" value="Submit">
     </form>
 </div>
 
-
-=======
 <div id="addProvider">
     <form id="addProviderForm">
-            <label>ID:</label><input type="text" name="id">
-            <label>Name:</label><input type="text" name="name">
-            <label>Area of Expertise:</label><input type="text" name="areaOfExpertise">
-            <input type="submit" value="Submit">
+        <label>ID:</label><input type="text" name="id">
+        <label>Name:</label><input type="text" name="name">
+        <label>Area of Expertise:</label><input type="text" name="areaOfExpertise">
+        <input type="submit" value="Submit" id="enter">
     </form>
 </div>
-
-<div id="displayArea">
-    <ul id="appList">
-
-    </ul>
-</div>
-
-
-<div id="appointmentButtons">
-    <input type="button" value="List Appointments" id="listAllAppointments">
-</div>
->>>>>>> origin/AppointmentsBookingSystem
 
 </body>
 </html>

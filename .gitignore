@@ -1,3 +1,4 @@
 /.idea/
 /BookingSystem/src/main/resources/application.yaml
 /BookingSystem/BookingSystem.iml
+/BookingSystem/target/classes/application.yaml
