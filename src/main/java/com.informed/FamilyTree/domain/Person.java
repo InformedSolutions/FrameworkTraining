@@ -12,7 +12,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name="person")
-public class Person {
+public class AustePerson {
 
     private int personID;
     private String personName;
