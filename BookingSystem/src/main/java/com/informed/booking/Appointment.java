@@ -13,6 +13,7 @@ public class Appointment {
     private int id;
     private String startDateTime;
     private String endDateTime;
+    private String provider;
     private String client;
     private int cost;
     private String description;
@@ -20,7 +21,7 @@ public class Appointment {
 
     public Appointment() {}
 
-    public Appointment(int id, String startDateTime, String endDateTime, String client, int cost, String description, Boolean hasClientMissedAppointments) {
+    public Appointment(int id, String startDateTime, String endDateTime, String provider, String client, int cost, String description, Boolean hasClientMissedAppointments) {
         this.id = id;
         this.startDateTime = startDateTime;
         this.endDateTime = endDateTime;
@@ -28,6 +29,7 @@ public class Appointment {
         this.cost = cost;
         this.description = description;
         this.hasClientMissedAppointments = hasClientMissedAppointments;
+        this.provider = provider;
     }
 
     public int getId() {
@@ -40,6 +42,10 @@ public class Appointment {
 
     public String getEndDateTime() {
         return endDateTime;
+    }
+
+    public String getProvider() {
+        return provider;
     }
 
     public String getClient() {
@@ -64,6 +70,7 @@ public class Appointment {
                 "id=" + id +
                 ", startDateTime='" + startDateTime + '\'' +
                 ", endDateTime='" + endDateTime + '\'' +
+                ", provider='" + provider + '\'' +
                 ", client='" + client + '\'' +
                 ", cost=" + cost +
                 ", description='" + description + '\'' +
