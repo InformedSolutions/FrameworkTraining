@@ -18,11 +18,16 @@ public class AustePerson {
     private String personName;
     private String sex;
     private Date dob;
-    @ManyToOne(cascade= CascadeType.ALL, fetch = FetchType.EAGER)
-    private Place birthPlaceID;
+    @ManyToOne(fetch = FetchType.EAGER,
+            cascade =  CascadeType.ALL)
+    @JoinColumn(name="birthPlaceId")
+    private Place birthPlace;
     private Date deathDate;
-    @ManyToOne(cascade= CascadeType.ALL, fetch = FetchType.EAGER)
-    private Place deathPlaceID;
+
+    @ManyToOne(fetch = FetchType.EAGER,
+            cascade =  CascadeType.ALL)
+    @JoinColumn(name="deathPlaceId")
+    private Place deathPlace;
     private boolean isMarried;
     private boolean hasChildren;
 
@@ -30,15 +35,15 @@ public class AustePerson {
 
     }
     public Person(int personID, String personName, String sex, Date dob,
-                  Place birthPlaceID, Date deathDate, Place deathPlaceID,
+                  Place birthPlace, Date deathDate, Place deathPlace,
                   Boolean isMarried, Boolean hasChildren) {
         this.personID = personID;
         this.personName = personName;
         this.sex = sex;
         this.dob = dob;
-        this.birthPlaceID = birthPlaceID;
+        this.birthPlace = birthPlace;
         this.deathDate = deathDate;
-        this.deathPlaceID = deathPlaceID;
+        this.deathPlace = deathPlace;
         this.isMarried = isMarried;
         this.hasChildren = hasChildren;
     }
@@ -75,12 +80,12 @@ public class AustePerson {
         this.dob = dob;
     }
 
-    public Place getBirthPlaceID() {
-        return birthPlaceID;
+    public Place getBirthPlace() {
+        return birthPlace;
     }
 
-    public void setBirthPlaceID(Place birthPlaceID) {
-        this.birthPlaceID = birthPlaceID;
+    public void setBirthPlace(Place birthPlace) {
+        this.birthPlace = birthPlace;
     }
 
     public Date getDeathDate() {
@@ -91,12 +96,12 @@ public class AustePerson {
         this.deathDate = deathDate;
     }
 
-    public Place getDeathPlaceID() {
-        return deathPlaceID;
+    public Place getDeathPlace() {
+        return deathPlace;
     }
 
     public void setDeathPlaceID(Place deathPlaceID) {
-        this.deathPlaceID = deathPlaceID;
+        this.deathPlace = deathPlace;
     }
 
     public Boolean getMarried() {
@@ -123,9 +128,9 @@ public class AustePerson {
                 ", personName: '" + personName + '\'' +
                 ", sex: '" + sex + '\'' +
                 ", dob: " + dob +
-                ", birthPlaceID: " + birthPlaceID +
+                ", birthPlace: " + birthPlace +
                 ", deathDate: " + deathDate +
-                ", deathPlaceID: " + deathPlaceID +
+                ", deathPlace: " + deathPlace +
                 ", isMarried: " + isMarried +
                 ", hasChildren: " + hasChildren +
                 '}';
