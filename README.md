@@ -1,6 +1,6 @@
 # Family Tree Service
 
-Team: Austin, Sarah and James
+Team: Austen, Sarah and James
 
 Data
 A Person has
