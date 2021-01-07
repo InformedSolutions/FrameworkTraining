@@ -14,10 +14,8 @@ import com.informed.booking.Appointment;
 import com.informed.booking.Client;
 import com.informed.booking.Provider;
 
-
 @RestController
 @RequestMapping("booking")
-
 public class BookingSystemController {
 
     @Autowired
@@ -34,13 +32,13 @@ public class BookingSystemController {
         return booker.getAllAppointments();
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/appointment/{id}")
     public Appointment getAppointment(@PathVariable int id) {
         System.out.println("BookingSystemController.getAppointment(" + id + ")");
         return this.booker.getAppointmentByID(id).orElse(null);
     }
 
-    @PostMapping
+    @PostMapping("/appointment")
     @ResponseStatus(HttpStatus.OK)
     public void addAppointment(@RequestBody Appointment appointment) {
         System.out.println("BookingSystemController.addAppointment(" + appointment + ")");
@@ -55,13 +53,13 @@ public class BookingSystemController {
         return booker.getAllClients();
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/client/{id}")
     public Client getClient(@PathVariable int id) {
         System.out.println("BookingSystemController.getClient(" + id + ")");
         return this.booker.getClientByID(id).orElse(null);
     }
 
-    @PostMapping
+    @PostMapping("/client")
     @ResponseStatus(HttpStatus.OK)
     public void addClient(@RequestBody Client client) {
         System.out.println("BookingSystemController.addClient(" + client + ")");
@@ -76,13 +74,13 @@ public class BookingSystemController {
         return booker.getAllProviders();
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/provider/{id}")
     public Provider getProvider(@PathVariable int id) {
         System.out.println("BookingSystemController.getProvider(" + id + ")");
         return this.booker.getProviderByID(id).orElse(null);
     }
 
-    @PostMapping
+    @PostMapping("/provider")
     @ResponseStatus(HttpStatus.OK)
     public void addProvider(@RequestBody Provider provider) {
         System.out.println("BookingSystemController.addProvider(" + provider + ")");

@@ -1,5 +1,6 @@
-package com.informed.booking;
+package com.informed.booking.repositories;
 
+import com.informed.booking.Appointment;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -9,7 +10,7 @@ import java.util.Optional;
 @Repository
 public interface AppointmentRepository extends CrudRepository<Appointment, Integer> {
 
-    @Query(value = "SELECT * FROM providers WHERE provider.name=?1",
+    @Query(value = "SELECT * FROM providers WHERE appointment.name=?1",
             nativeQuery = true)
     Optional<Appointment> getAppointmentByName(String name);
 

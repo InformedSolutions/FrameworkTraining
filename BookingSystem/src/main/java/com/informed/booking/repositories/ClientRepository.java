@@ -1,5 +1,6 @@
-package com.informed.booking;
+package com.informed.booking.repositories;
 
+import com.informed.booking.Client;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

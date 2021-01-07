@@ -1,5 +1,6 @@
 package com.informed.booking;
 
+import com.informed.booking.repositories.AppointmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
