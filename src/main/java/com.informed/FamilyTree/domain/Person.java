@@ -1,7 +1,6 @@
 package com.informed.FamilyTree.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 
@@ -14,16 +13,22 @@ import java.util.Date;
 @Table(name="person")
 public class AustePerson {
 
+    @Id
     private int personID;
     private String personName;
     private String sex;
     private Date dob;
+    @ManyToOne(cascade= CascadeType.ALL, fetch = FetchType.EAGER)
     private Place birthPlaceID;
     private Date deathDate;
+    @ManyToOne(cascade= CascadeType.ALL, fetch = FetchType.EAGER)
     private Place deathPlaceID;
-    private Boolean isMarried;
-    private Boolean hasChildren;
+    private boolean isMarried;
+    private boolean hasChildren;
 
+    public Person () {
+
+    }
     public Person(int personID, String personName, String sex, Date dob,
                   Place birthPlaceID, Date deathDate, Place deathPlaceID,
                   Boolean isMarried, Boolean hasChildren) {
