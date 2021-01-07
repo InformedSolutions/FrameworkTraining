@@ -16,7 +16,7 @@ public class ProviderRepoDAO {
     public List<Provider> getAllProviders() {
         System.out.println("BookingSystem.getProviders");
         Iterable<Provider> iterable = repo.findAll();
-        List<Provider> providers = new ArrayList<Provider>();
+        List<Provider> providers = new ArrayList<>();
         for (Provider b : iterable) {
             providers.add(b);
         }

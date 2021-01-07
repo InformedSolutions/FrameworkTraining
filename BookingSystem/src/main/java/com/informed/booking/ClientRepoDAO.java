@@ -13,10 +13,10 @@ public class ClientRepoDAO {
     @Autowired
     private ClientRepository repo;
 
-    public List<Client> getAllProviders() {
+    public List<Client> getAllClients() {
         System.out.println("BookingSystem.getClient");
         Iterable<Client> iterable = repo.findAll();
-        List<Client> clients = new ArrayList<Client>();
+        List<Client> clients = new ArrayList<>();
         for (Client b : iterable) {
             clients.add(b);
         }
@@ -33,11 +33,11 @@ public class ClientRepoDAO {
         repo.delete(client);
     }
 
-    public Optional<Provider> getClientByID(int id) {
+    public Optional<Client> getClientByID(int id) {
         return repo.findById(id);
     }
 
-    public Optional<Provider> getClientByName(String name) {
+    public Optional<Client> getClientByName(String name) {
         return repo.getClientByName(name);
     }
 }

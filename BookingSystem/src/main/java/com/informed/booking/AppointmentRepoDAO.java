@@ -16,7 +16,7 @@ public class AppointmentRepoDAO {
     public List<Appointment> getAllAppointments() {
         System.out.println("BookingSystem.getAppointment");
         Iterable<Appointment> iterable = repo.findAll();
-        List<Appointment> appointments = new ArrayList<Appointment>();
+        List<Appointment> appointments = new ArrayList<>();
         for (Appointment b : iterable) {
             appointments.add(b);
         }
