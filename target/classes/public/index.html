@@ -21,75 +21,71 @@
     <script src="/Javascript/FamilyTree.js"></script>
 </head>
 <body>
-<h1>Family Tree Service</h1>
-<p>
-    This family tree service aims to give you a deeper
-    understanding of your heritage
-    and history to shed light on who you really are.
-</p>
-<div id='error' class='error'>
-</div>
-<div id="div1" class='liststyle'>
-    <ul id='booklist'>
+    <h1>Family Tree Service</h1>
+    <p>
+        This family tree service aims to give you a deeper
+        understanding of your heritage
+        and history to shed light on who you really are.
+    </p>
+    <div id='error' class='error'>
+    </div>
+    <div id="div1" class='liststyle'>
+        <ul id='booklist'>
 
-    </ul>
-</div>
-<hr />
-<form id="bookinputform">
-    <legend>Add a person:</legend>
-    ID: <input type="text" name="id"><br />
-    Name: <input type="text" name="name"><br />
-    Sex: <input type="text" name="sex"><br />
-    DOB: <input type="text" name="dob"><br />
-    Birth Place: <input type="text" name="birthPlace"><br />
-    Birth Date: <input type="text" name="deathDate"><br />
-    Death Place: <input type="text" name="deathPlace"><br />
-    Is Married: <input type="text" name="isMarried"><br />
-    Has Children: <input type="text" name="hasChildren"><br />
-    <input type="submit" value="Enter" id='enter'>
-</form>
-<hr />
-<form id="bookinputform">
-    <legend>Modify/delete person:</legend>
-    ID: <input type="text" name="id"><br />
-    Name: <input type="text" name="name"><br />
-    Sex: <input type="text" name="sex"><br />
-    DOB: <input type="text" name="dob"><br />
-    Birth Place: <input type="text" name="birthPlace"><br />
-    Birth Date: <input type="text" name="deathDate"><br />
-    Death Place: <input type="text" name="deathPlace"><br />
-    Is Married: <input type="text" name="isMarried"><br />
-    Has Children: <input type="text" name="hasChildren"><br />
-    <input type="submit" value="Enter" id='enter'>
-</form>
-<hr />
-<p>Show all persons</p>
-<form>
-    <input type="submit" id="showPerson" value="Show all Persons"/>
-</form>
-<div id="div1" class='liststyle'>
-    <ul id='AllPersonlist'>
+        </ul>
+    </div>
+    <hr />
 
-    </ul>
-</div>
-<hr />
-<p>List parents of a person</p>
-<form>
-    <input type="submit" id="showParent" value="Show all parent of a person"/>
-</form>
-<div id="div2" class='liststyle'>
-    <ul id='AllParentlist'>
+    <form id="addPerson">
+        <legend>Add a person:</legend>
+        ID: <input type="text" name="id"><br />
+        Name: <input type="text" name="name"><br />
+        Sex: <input type="text" name="sex"><br />
+        DOB: <input type="text" name="dob"><br />
+        Birth Place: <input type="text" name="birthPlace"><br />
+        Birth Date: <input type="text" name="deathDate"><br />
+        Death Place: <input type="text" name="deathPlace"><br />
+        Is Married: <input type="text" name="isMarried"><br />
+        Has Children: <input type="text" name="hasChildren"><br />
+        <input type="submit" value="Enter" id='enter'>
+    </form>
+    <hr />
 
-    </ul>
-</div>
-<p>List all children of a person</p>
-<form>
-    <input type="submit" id="showChildren" value="Show all children of a person"/>
-</form>
-<div id="div3" class='liststyle'>
-    <ul id='AllChildrenlist'>
+    <form id="modifyPerson">
+        <legend>Modify a Person</legend>
+        ID: <input type="text" name="id" placeholder="Search by ID"><br />
+        <input type="submit" value="Search" id='search'>
+    </form>
 
-    </ul>
-</div>
+    <hr />
+    <p>Show all persons</p>
+    <form>
+        <input type="submit" id="showPerson" value="Show all Persons"/>
+    </form>
+
+    <div id="div1" class='liststyle'>
+        <ul id='AllPersonlist'>
+
+        </ul>
+    </div>
+    <hr />
+    <p>List parents of a person</p>
+    <form>
+        <input type="submit" id="showParent" value="Show all parent of a person"/>
+    </form>
+    <div id="div2" class='liststyle'>
+        <ul id='AllParentlist'>
+
+        </ul>
+    </div>
+    <p>List all children of a person</p>
+    <form>
+        <input type="submit" id="showChildren" value="Show all children of a person"/>
+    </form>
+    <div id="div3" class='liststyle'>
+        <ul id='AllChildrenlist'>
+
+        </ul>
+    </div>
 </body>
 </html>
