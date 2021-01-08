@@ -74,24 +74,10 @@
 
 </div>
 
-<div id="addAppointment" class="addAppointment">
-    <form id="addAppointmentForm" class="formStyle">
-        <legend>Book an appointment:</legend>
-        <label>Appointment Start:</label><input name="startDateTime" type="datetime-local" />
-        <label>Appointment End:</label><input name="endDateTime" type="datetime-local" />
-        <label>Provider:</label><select class="providerDropDown" name="provider"></select>
-        <label>Client:</label><select class="clientDropDown" name="client"></select>
-        <label>Cost:</label><input min="0" name="cost" step="any" type="number" />
-        <label>Description:</label><input name="description" type="text" />
-        <input name="hasClientMissedAppointments" type="hidden" value="false" />
-        <input type="submit" value="Submit" />
-    </form>
-</div>
-
 <div id="addProvider">
     <form id="addProviderForm" class="formStyle">
         <legend>Register as a provider:</legend>
-        <ul></ul>
+        <ul>
         <li>
         <label>Name: </label><input type="text" name="name" class="field-style">
         </li>
@@ -108,11 +94,37 @@
 <div>
     <form id="clientregistryform" class="formStyle">
         <legend>Register as a client:</legend>
-        Name: <input type="text" name="name"><br>
-        Address: <input type="text" name="address"><br>
-        Phone number: <input type="text" name="phoneNumber"><br>
-        Email address: <input type="text" name="emailAddress"><br>
+        <ul>
+            <li>
+        Name: <input type="text" name="name">
+            </li>
+            <li>
+        Address: <input type="text" name="address">
+            </li>
+            <li>
+        Phone number: <input type="text" name="phoneNumber">
+            </li>
+            <li>
+        Email address: <input type="text" name="emailAddress">
+            </li>
+            <li>
         <input type="submit" value="Submit" id="submitClient">
+            </li>
+        </ul>
+    </form>
+</div>
+
+<div id="addAppointment" class="addAppointment">
+    <form id="addAppointmentForm" class="formStyle">
+        <legend>Book an appointment:</legend>
+        <label>Appointment Start:</label><input name="startDateTime" type="datetime-local" />
+        <label>Appointment End:</label><input name="endDateTime" type="datetime-local" />
+        <label>Provider:</label><select class="providerDropDown" name="provider"></select>
+        <label>Client:</label><select class="clientDropDown" name="client"></select>
+        <label>Cost:</label><input min="0" name="cost" step="any" type="number" />
+        <label>Description:</label><input name="description" type="text" />
+        <input name="hasClientMissedAppointments" type="hidden" value="false" />
+        <input type="submit" value="Submit" />
     </form>
 </div>
 
