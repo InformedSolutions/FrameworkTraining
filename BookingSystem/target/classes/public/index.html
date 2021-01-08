@@ -18,6 +18,48 @@
 </head>
 <body>
 
+<h1>Rachel and Luke's Healthcare Practice</h1>
+
+<p>Rachel and Luke's Healthcare Practice has highly experienced practitioners who are specialists in diverse of areas of wellness,
+    such as dentistry, occupational therapy and acupuncture.</p>
+<ul>
+    <li>
+        If you are new to our practice, please register as a client below.
+    </li>
+    <li>
+        If you would like to book an appointment with one of our leading wellness experts,
+        please consult our appointment schedules below to find a time with one of our specialists which suits you. You can view all currently booked appointments in the practice,
+        and the schedules of all of our practitioners. If you have already made a booking with us, you can also look at your own scheduled appointments.
+    </li>
+    <li>
+        If you are already registered with us as a client, our extremely efficient
+        booking system below can schedule your new appointments right away.
+    </li>
+    <li>
+        If you can meet our high standards for expert healthcare professionals, register below as a practitioner.
+    </li>
+</ul>
+<!--<p>If you are new to our practice, please register as a client below.</p>-->
+
+<!--<p>If you would like to book an appointment with one of our leading wellness experts,-->
+<!--    please consult our appointment schedules below to find a time with one of our specialists which suits you. You can view all currently booked appointments in the practice,-->
+<!--    and the schedules of all of our practitioners. If you have already made a booking with us, you can also look at your own scheduled appointments.</p>-->
+
+<!--<p> If you are already registered with us as a client, our extremely efficient-->
+<!-- booking system below can schedule your new appointments right away.</p>-->
+
+<!--<p>If you can meet our high standards for expert healthcare professionals, register below as a practitioner.</p>-->
+
+<div id="addProvider">
+    <form id="addProviderForm">
+        <legend>Register as a provider:</legend>
+            <label>ID:</label><input type="text" name="id">
+            <label>Name:</label><input type="text" name="name">
+            <label>Area of Expertise:</label><input type="text" name="areaOfExpertise">
+            <input type="submit" value="Submit">
+    </form>
+</div>
+
 <div id="displayArea">
 
     <table id="appTable" class="styled-table">
@@ -30,18 +72,23 @@
 <div id="appointmentButtons">
     <input type="button" value="List Appointments" id="listAllAppointments">
 
-
+    <span class="listButton">
+        <span>              </span>
     <select id="clientDropDown">
 
     </select>
 
     <input type="button" value="Client Appointments" id="listClientAppointments">
+    </span>
+
+
 
     <select id="providerDropDown">
 
     </select>
 
     <input type="button" value="Provider Appointments" id="listProviderAppointments">
+
 </div>
 
 <div>
@@ -56,14 +103,7 @@
     </form>
 </div>
 
-<div id="addProvider">
-    <form id="addProviderForm">
-        <label>ID:</label><input type="text" name="id">
-        <label>Name:</label><input type="text" name="name">
-        <label>Area of Expertise:</label><input type="text" name="areaOfExpertise">
-        <input type="submit" value="Submit" id="enter">
-    </form>
-</div>
+
 
 </body>
 </html>

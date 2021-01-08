@@ -29,3 +29,14 @@
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
+
+h1 {
+    color: #009879;
+    font-style: italic;
+}
+
+.listButton {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
