@@ -51,7 +51,7 @@ public class Marriage {
         return marriagePlace;
     }
 
-    public void setMarriagePlaceID(Place marriagePlaceID) {
+    public void setMarriagePlaceID(Place marriagePlace) {
         this.marriagePlace = marriagePlace;
     }
 
