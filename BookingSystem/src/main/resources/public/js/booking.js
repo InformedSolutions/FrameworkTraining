@@ -3,6 +3,10 @@ $(document).ready(
         loadClientDropdown();
         loadProviderDropdown();
 
+        $("#submitProvider").click(function() {
+                        alert("Thank you for registering a new provider")
+                    });
+
         $("#addProviderForm").submit(function () {
             console.log('addProvider via jQuery');
             event.preventDefault();
@@ -58,6 +62,10 @@ $(document).ready(
                             dataType: "json"
                         });
                 });
+
+         $("#submitAppointment").click(function() {
+                                alert("Thank you for booking an appointment")
+                            });
 
          $("#addAppointmentForm").submit(function () {
                      console.log('addAppointment via jQuery');
