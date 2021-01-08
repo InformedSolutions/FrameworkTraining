@@ -18,6 +18,7 @@ $(document).ready(
                 success: function (result) {
                     console.log(result);
                     alert("Provider added");
+                    loadProviderDropdown();
                 },
                 failure: function (errorMessage) {
                     alert(errorMessage);
@@ -44,6 +45,7 @@ $(document).ready(
                             success: function (result) {
                                 console.log(result);
                                 alert("New client registered")
+                                loadClientDropdown();
                             },
                             failure: function (errorMessage) {
                                 alert(errorMessage)
@@ -128,7 +130,7 @@ $(document).ready(
             event.preventDefault();
 
             // GET via AJAX
-            $.get("http://localhost:8080/booking/appointmentList/client/" + $('#clientDropDown').val(),
+            $.get("http://localhost:8080/booking/appointmentList/client/" + $('.clientDropDown').val(),
             function(appointments){ createTable(appointments) }
             );
 
@@ -140,7 +142,7 @@ $(document).ready(
                     var appointments
 
                     // GET via AJAX
-                    $.get("http://localhost:8080/booking/appointmentList/provider/" + $('#providerDropDown').val(),
+                    $.get("http://localhost:8080/booking/appointmentList/provider/" + $('.providerDropDown').val(),
                                 function(appointments){ createTable(appointments) }
                                 );
                 });
@@ -196,7 +198,7 @@ function createTable(appointments) {
 }
 
 function loadClientDropdown() {
-
+    $('.clientDropDown').empty();
     $.get("http://localhost:8080/booking/clientList", function(clients){
       $('.clientDropDown').append('<option selected value="0">Select a client</option>');
       $.each(clients, function (i, client) {
@@ -210,7 +212,7 @@ function loadClientDropdown() {
 }
 
 function loadProviderDropdown() {
-
+    $('.clientDropDown').empty();
     $.get("http://localhost:8080/booking/providerList", function(providers){
       $('.providerDropDown').append('<option selected value="0">Select a provider</option>');
       $.each(providers, function (i, provider) {
