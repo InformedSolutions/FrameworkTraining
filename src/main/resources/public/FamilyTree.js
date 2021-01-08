@@ -31,11 +31,26 @@ $(document).ready(
                         console.log(persons);
                         $.each(persons, function(i, person) {
                         console.log(i, ', '. person);
+                        let children = person.hasChildren;
+                        let marriage = person.married;
+                        let deathDates = person.deathDate;
+                        let deathPlace = person.deathPlace;
                         let html = "<li>";
                         html += person.personName + " ID is " + person.personID+ ".";
-                        html += "&nbsp" + person.personName + " was born on " + dateToYMD(person.dob) + ". " + person.personName + " Birth Place ID is " + person.birthPlaceId + ". ";
-                        html += person.personName + " has " + person.hasChildren + " children. " + person.personName + " has been married " + person.married + " before " + "." + person.personName + " died on " + dateToYMD(person.deathDate)+ ". ";
-                        html += person.personName + " Death Place ID is " + person.deathPlaceId + ".";
+                        html += "&nbsp" + person.personName + " was born on " + dateToYMD(person.dob) + ". ";
+                        html += person.personName + " Birth Place is " + person.birthPlace.placeAddress + " and the Postcode is " + person.birthPlace.placePostcode + ". ";
+                        if (children == true) {
+                            html += person.personName + " has children. ";
+                        }
+                        if (marriage == true) {
+                        html += person.personName + " has been married before. ";
+                        }
+                        if (deathDates != null) {
+                            html += person.personName + " died on " + dateToYMD(person.deathDate)+ ". ";
+                        }
+                        if (deathPlace != null) {
+                            html += person.personName + " Death Place is " + person.deathPlace.placeAddress + " and the Postcode is " + person.deathPlace.placePostcode + ". ";
+                        }
                         html += "</li>";
                         $('#AllPersonList').append(html);
                         });
