@@ -2,8 +2,10 @@ package com.informed.FamilyTree.model;
 
 import com.informed.FamilyTree.domain.Marriage;
 import com.informed.FamilyTree.domain.Person;
+import com.informed.FamilyTree.domain.Place;
 import com.informed.FamilyTree.repository.MarriageDAO;
 import com.informed.FamilyTree.repository.PersonDAO;
+import com.informed.FamilyTree.repository.PlaceDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -18,10 +20,13 @@ public class FamilyTreeModel {
     private PersonDAO personRepo;
     @Autowired
     private MarriageDAO marriageRepo;
+    @Autowired
+    private PlaceDAO placeRepo;
 
     // Declarations
     private final List<Person> persons = new ArrayList<> ();
     private final List<Marriage> marriages = new ArrayList<>();
+    private final List<Place> places = new ArrayList<>();
 
     // PersonDAO
     public List<Person> getAllPersons () {
@@ -44,5 +49,14 @@ public class FamilyTreeModel {
         return allMarriages;
     }
     // Place DAO
+    public List<Place> getAllPlaces() {
+        System.out.println("FamilyTreeModel.getAllPlaces( " + places + ")");
+        Iterable<Place> iterate = placeRepo.getAllPlaces();
+        List<Place> allPlaces = new ArrayList<>();
+        for (Place place : iterate) {
+            allPlaces.add(place);
+        }
+        return allPlaces;
+    }
 
 }
