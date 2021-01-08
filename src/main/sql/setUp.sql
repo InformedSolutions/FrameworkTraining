@@ -37,7 +37,6 @@ CREATE TABLE `familytree`.`place` (
   PRIMARY KEY (`placeID`));
 
 
--- Addition of Information into Databases
 
 INSERT INTO `place` (`placeID`, `place_address`, `place_postcode`) VALUES ('010', 'Glasgow', 'PA3 2ST');
 INSERT INTO `place` (`placeID`, `place_address`, `place_postcode`) VALUES ('020', 'Manchester', 'WA14 4PE');
@@ -53,8 +52,6 @@ INSERT INTO `person` (`personID`, `person_name`, `sex`, `dob`, `birth_place_id`,
 
 INSERT INTO `familytree`.`marriage` (`marriageID`, `marriage_date`, `marriage_placeid`, `husbandid`, `wifeid`) VALUES ('001', '1990/10/02', '030', '001', '002');
 INSERT INTO `familytree`.`marriage` (`marriageID`, `marriage_date`, `marriage_placeid`, `husbandid`, `wifeid`) VALUES ('002', '2020/10/02', '040', '004', '003');
-
-
 
 INSERT INTO `familytree`.`children` (`personID`, `motherID`, `fatherID`) VALUES ('003', '002', '001');
 INSERT INTO `familytree`.`children` (`personID`, `motherID`, `fatherID`) VALUES ('005', '002', '001');
