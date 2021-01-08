@@ -27,8 +27,8 @@ public class FamilyTreeController {
         return familyTreeModel.getAllPersons();
     }
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.OK)
+    @PostMapping("persons")
+    @ResponseStatus(HttpStatus.CREATED)
     public void addPerson(@RequestBody Person person) {
         System.out.println("FamilyTreeController.getAllPersons(" + familyTreeModel + ")");
         this.familyTreeModel.addPerson(person);
