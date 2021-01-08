@@ -34,17 +34,21 @@ public class SeleniumJUnitTest {
     }
 
     @Test
-    public void checkParentList() {
+    public void checkPeopleList() {
         config.getDriver().findElement(By.id("showPerson")).click();
-        WebElement ulelement = config.getDriver().findElement(By.id("AllPersonlist"));
-        List<WebElement> elements = ulelement.findElements(By.name("li"));
+        WebElement ulelement = config.getDriver().findElement(By.id("AllPersonList"));
+        List<WebElement> elements = ulelement.findElements(By.tagName("li"));
         assertEquals(5, elements.size());
         for (WebElement el : elements) {
             String s = el.getText();
             System.out.println(s);
         }
         String s1 = elements.get(0).getText();
-//        assertEquals();
+        String expected = "Bill Walsh ID is 1. Bill Walsh was born on 1967-10-10. Bill Walsh Birth Place is Glasgow and the Postcode is PA3 2ST. Bill Walsh has children. Bill Walsh has been married before. Bill Walsh died on 2019-08-20. Bill Walsh Death Place is Manchester and the Postcode is WA14 4PE.";
+        assertEquals(expected, s1 );
+        String s2 = elements.get(1).getText();
+        String expected2 = "Alice Walsh ID is 2. Alice Walsh was born on 1970-06-04. Alice Walsh Birth Place is London and the Postcode is LU2 LPY. Alice Walsh has children. Alice Walsh has been married before. Alice Walsh died on 2010-02-10. Alice Walsh Death Place is Manchester and the Postcode is WA14 4PE.";
+        assertEquals(expected2, s2);
 
     }
 
