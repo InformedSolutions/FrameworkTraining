@@ -18,4 +18,9 @@ public class PersonDAO {
         return personRepo.findAll();
     }
 
+    public void savePerson (Person person) {
+        personRepo.save(person);
+    }
+
+
 }

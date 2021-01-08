@@ -11,8 +11,13 @@ public class Place {
     @Id
     private int placeID;
     private String placeAddress;
-    private String placePostcode;
+    private String placePostcode = "";
+    private static int count = 10;
 
+    public Place (String s) {
+        this.placeAddress = s;
+        this.placeID = ++count;
+    }
     public Place (){
 
     }
