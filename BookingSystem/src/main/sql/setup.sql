@@ -1,7 +1,13 @@
+DROP TABLE IF EXISTS `bookingsystem`.`appointments`;
+DROP TABLE IF EXISTS `bookingsystem`.`clients`;
+DROP TABLE IF EXISTS `bookingsystem`.`providers`;
+
+DROP SCHEMA IF EXISTS `bookingsystem`;
+
 CREATE SCHEMA `bookingsystem` ;
 
 CREATE TABLE `bookingsystem`.`appointments` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `startDateTime` DATETIME NOT NULL,
   `endDateTime` DATETIME NOT NULL,
   `provider` VARCHAR(45) NOT NULL,
@@ -12,7 +18,7 @@ CREATE TABLE `bookingsystem`.`appointments` (
   PRIMARY KEY (`id`));
 
 CREATE TABLE `bookingsystem`.`clients` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `address` VARCHAR(45) NOT NULL,
   `phoneNumber` VARCHAR(45) NOT NULL,
@@ -20,7 +26,7 @@ CREATE TABLE `bookingsystem`.`clients` (
   PRIMARY KEY (`id`));
 
 CREATE TABLE `bookingsystem`.`providers` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `areaOfExpertise` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`));

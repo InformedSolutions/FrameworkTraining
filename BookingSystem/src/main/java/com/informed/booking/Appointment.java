@@ -56,6 +56,10 @@ public class Appointment {
         return client;
     }
 
+    public void setProvider(String provider) { this.provider = provider; }
+
+    public void setClient(String client) { this.client = client; }
+
     public int getCost() {
         return cost;
     }

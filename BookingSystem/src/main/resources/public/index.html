@@ -41,16 +41,6 @@
     </li>
 </ul>
 
-<div id="addProvider">
-    <form id="addProviderForm">
-        <legend>Register as a provider:</legend>
-            <label>ID:</label><input type="text" name="id">
-            <label>Name:</label><input type="text" name="name">
-            <label>Area of Expertise:</label><input type="text" name="areaOfExpertise">
-            <input type="submit" value="Submit">
-    </form>
-</div>
-
 <div id="displayArea">
 
     <table id="appTable" class="styled-table">
@@ -64,8 +54,9 @@
     <input type="button" value="List Appointments" id="listAllAppointments">
 
     <span class="listButton">
+
         <span>              </span>
-    <select id="clientDropDown">
+    <select class="clientDropDown">
 
     </select>
 
@@ -74,7 +65,7 @@
 
 
 
-    <select id="providerDropDown">
+    <select class="providerDropDown">
 
     </select>
 
@@ -82,10 +73,31 @@
 
 </div>
 
+<div id="addAppointment">
+    <form id="addAppointmentForm">
+        <label>Appointment Start:</label><input name="startDateTime" type="datetime-local" />
+        <label>Appointment End:</label><input name="endDateTime" type="datetime-local" />
+        <label>Provider:</label><select class="providerDropDown" name="provider"></select>
+        <label>Client:</label><select class="clientDropDown" name="client"></select>
+        <label>Cost:</label><input min="0" name="cost" step="any" type="number" />
+        <label>Description:</label><input name="description" type="text" />
+        <input name="hasClientMissedAppointments" type="hidden" value="false" />
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+
+<div id="addProvider">
+    <form id="addProviderForm">
+        <legend>Register as a provider:</legend>
+        <label>Name:</label><input type="text" name="name">
+        <label>Area of Expertise:</label><input type="text" name="areaOfExpertise">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
 <div>
     <form id="clientregistryform">
         <legend>Register as a client:</legend>
-        ID: <input type="text" name="id"><br>
         Name: <input type="text" name="name"><br>
         Address: <input type="text" name="address"><br>
         Phone number: <input type="text" name="phoneNumber"><br>
