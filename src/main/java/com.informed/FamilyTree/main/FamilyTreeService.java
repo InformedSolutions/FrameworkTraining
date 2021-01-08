@@ -20,7 +20,6 @@ public class FamilyTreeService {
     public static void main(String[] args) throws SQLException {
         System.out.println("Starting FamilyTree setup");
         ConfigurableApplicationContext context = SpringApplication.run(FamilyTreeService.class, args);
-//        FamilyTreeController familyTreeController = context.getBean(FamilyTreeController.class);
         System.out.println("Setup finished");
 
     }
