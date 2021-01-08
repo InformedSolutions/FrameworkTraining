@@ -23,7 +23,6 @@ public class Person {
     @JoinColumn(name="birthPlaceId")
     private Place birthPlace;
     private Date deathDate;
-
     @ManyToOne(fetch = FetchType.EAGER,
             cascade =  CascadeType.ALL)
     @JoinColumn(name="deathPlaceId")
