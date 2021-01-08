@@ -75,7 +75,7 @@
 </div>
 
 <div id="addAppointment" class="addAppointment">
-    <form id="addAppointmentForm">
+    <form id="addAppointmentForm" class="formStyle">
         <legend>Book an appointment:</legend>
         <ul> <li><label>Appointment Start:</label><input name="startDateTime" type="datetime-local" /></li>
             <li><label>Appointment End:</label><input name="endDateTime" type="datetime-local" /></li>
@@ -89,16 +89,24 @@
 </div>
 
 <div id="addProvider">
-    <form id="addProviderForm">
+    <form id="addProviderForm" class="formStyle">
         <legend>Register as a provider:</legend>
-        <label>Name:</label><input type="text" name="name">
-        <label>Area of Expertise:</label><input type="text" name="areaOfExpertise">
-        <input type="submit" value="Submit" id="submitProvider">
+        <ul></ul>
+        <li>
+        <label>Name: </label><input type="text" name="name" class="field-style">
+        </li>
+        <li>
+        <label>Area of Expertise: </label><input type="text" name="areaOfExpertise" class="field-style">
+        </li>
+        <li>
+        <input type="submit" value="Submit" id="submitProvider>
+        </li>
+        </ul>
     </form>
 </div>
 
 <div>
-    <form id="clientregistryform">
+    <form id="clientregistryform" class="formStyle">
         <legend>Register as a client:</legend>
         Name: <input type="text" name="name"><br>
         Address: <input type="text" name="address"><br>
