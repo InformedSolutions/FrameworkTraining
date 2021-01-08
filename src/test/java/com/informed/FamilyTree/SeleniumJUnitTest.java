@@ -44,7 +44,7 @@ public class SeleniumJUnitTest {
             System.out.println(s);
         }
         String s1 = elements.get(0).getText();
-        assertEquals();
+//        assertEquals();
 
     }
 
