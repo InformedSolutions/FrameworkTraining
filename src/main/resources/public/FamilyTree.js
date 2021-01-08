@@ -21,7 +21,7 @@ $(document).ready(
                    .hide('slow')
                    .show('slow');
         });
-        //Set up some show list of books behaviour
+        //Set up some show list of persons
         $("#showPerson").click(
             function () {
                 console.log('running click on showAllPersons');
@@ -56,12 +56,22 @@ $(document).ready(
                         });
                       });
             });
-        $("#marriageList").click(
+
+//Set up some show list of marriages
+        $("#showMarriage").click(
             function () {
-                console.log("Running click on marriageList");
-                event.preventDefault;
-                $.get("http://localhost:8080/FamilyTree/marriage/list"),
-                    function(marriages) {
-                        console.log}
-                });
+                console.log('running click on AllMarriageList');
+                event.preventDefault();
+                $.get("http://localhost:8080/FamilyTree/marriage/list",
+                      function(marriages) {
+                        console.log(marriages);
+                        $.each(marriages, function(i, marriage) {
+                        console.log(i, ', '. marriage);
+                        let html = "<li>";
+                        html += "Marriage " + marriage.marriageID + " got married on " + dateToYMD(marriage.marriageDate) + ". The Husband ID is " + marriage.husbandID + " and the Wife ID is " + marriage.wifeID + ". ";
+                        html += "</li>";
+                        $('#AllMarriageList').append(html);
+                        });
+                      });
+            });
 });
