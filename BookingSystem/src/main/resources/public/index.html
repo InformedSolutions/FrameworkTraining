@@ -74,8 +74,36 @@
 
 </div>
 
+<div id="addProvider">
+    <form id="addProviderForm" class="formStyle">
+        <legend>Register as a provider:</legend>
+        <ul></ul>
+        <li>
+        <label>Name: </label><input type="text" name="name" class="field-style">
+        </li>
+        <li>
+        <label>Area of Expertise: </label><input type="text" name="areaOfExpertise" class="field-style">
+        </li>
+        <li>
+        <input type="submit" value="Submit">
+        </li>
+        </ul>
+    </form>
+</div>
+
+<div>
+    <form id="clientregistryform" class="formStyle">
+        <legend>Register as a client:</legend>
+        Name: <input type="text" name="name"><br>
+        Address: <input type="text" name="address"><br>
+        Phone number: <input type="text" name="phoneNumber"><br>
+        Email address: <input type="text" name="emailAddress"><br>
+        <input type="submit" value="Submit" id="submitClient">
+    </form>
+</div>
+
 <div id="addAppointment" class="addAppointment">
-    <form id="addAppointmentForm">
+    <form id="addAppointmentForm" class="formStyle">
         <legend>Book an appointment:</legend>
         <label>Appointment Start:</label><input name="startDateTime" type="datetime-local" />
         <label>Appointment End:</label><input name="endDateTime" type="datetime-local" />
@@ -85,26 +113,6 @@
         <label>Description:</label><input name="description" type="text" />
         <input name="hasClientMissedAppointments" type="hidden" value="false" />
         <input type="submit" value="Submit" />
-    </form>
-</div>
-
-<div id="addProvider">
-    <form id="addProviderForm">
-        <legend>Register as a provider:</legend>
-        <label>Name:</label><input type="text" name="name">
-        <label>Area of Expertise:</label><input type="text" name="areaOfExpertise">
-        <input type="submit" value="Submit">
-    </form>
-</div>
-
-<div>
-    <form id="clientregistryform">
-        <legend>Register as a client:</legend>
-        Name: <input type="text" name="name"><br>
-        Address: <input type="text" name="address"><br>
-        Phone number: <input type="text" name="phoneNumber"><br>
-        Email address: <input type="text" name="emailAddress"><br>
-        <input type="submit" value="Submit" id="submitClient">
     </form>
 </div>
 
