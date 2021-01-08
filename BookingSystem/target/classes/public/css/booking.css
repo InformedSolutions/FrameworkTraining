@@ -40,3 +40,12 @@ h1 {
     padding-left: 20px;
 }
 
+#clientregistryform {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#addProviderForm {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
