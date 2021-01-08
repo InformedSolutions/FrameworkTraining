@@ -62,6 +62,16 @@ $(document).ready(
                 event.preventDefault;
                 $.get("http://localhost:8080/FamilyTree/marriage/list"),
                     function(marriages) {
-                        console.log}
+                        console.log(marriages)
+                        $.each(marriages, function(i, marriages) {
+                        console.log(i, ', '.marriages);
+                        let marriageId = marriage.marriageID;
+                        let marriageDate = marriage.marriageDate;
+                        let marriagePlace = marriage.marriagePlace
+                        let husbandID = marriage.husbandID;
+                        let wifeID = marriage.wifeID;
+                        })
+                    }
+
                 });
 });
