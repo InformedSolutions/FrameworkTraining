@@ -21,7 +21,5 @@ public class FamilyTreeService {
         System.out.println("Starting FamilyTree setup");
         ConfigurableApplicationContext context = SpringApplication.run(FamilyTreeService.class, args);
         System.out.println("Setup finished");
-
     }
-
 }
