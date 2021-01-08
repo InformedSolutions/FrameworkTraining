@@ -26,7 +26,7 @@ $(document).ready(
             function () {
                 console.log('running click on showAllPersons');
                 event.preventDefault();
-                $.get("http://localhost:8080/FamilyTree/list",
+                $.get("http://localhost:8080/FamilyTree/persons/list",
                       function(persons) {
                         console.log(persons);
                         $.each(persons, function(i, person) {
@@ -56,4 +56,12 @@ $(document).ready(
                         });
                       });
             });
-        });
+        $("#marriageList").click(
+            function () {
+                console.log("Running click on marriageList");
+                event.preventDefault;
+                $.get("http://localhost:8080/FamilyTree/marriage/list"),
+                    function(marriages) {
+                        console.log}
+                });
+});
