@@ -55,7 +55,6 @@
 
     <span class="listButton">
 
-        <span>              </span>
     <select class="clientDropDown">
 
     </select>
@@ -75,8 +74,9 @@
 
 </div>
 
-<div id="addAppointment">
+<div id="addAppointment" class="addAppointment">
     <form id="addAppointmentForm">
+        <legend>Book an appointment:</legend>
         <label>Appointment Start:</label><input name="startDateTime" type="datetime-local" />
         <label>Appointment End:</label><input name="endDateTime" type="datetime-local" />
         <label>Provider:</label><select class="providerDropDown" name="provider"></select>
@@ -104,7 +104,7 @@
         Address: <input type="text" name="address"><br>
         Phone number: <input type="text" name="phoneNumber"><br>
         Email address: <input type="text" name="emailAddress"><br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" id="submitClient">
     </form>
 </div>
 

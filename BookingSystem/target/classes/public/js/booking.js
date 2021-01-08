@@ -2,7 +2,6 @@ $(document).ready(
     function () {
         loadClientDropdown();
         loadProviderDropdown();
-        $("#listAllAppointments").click();
 
         $("#addProviderForm").submit(function () {
             console.log('addProvider via jQuery');
@@ -29,6 +28,10 @@ $(document).ready(
             });
 
         });
+
+            $("#submitClient").click(function() {
+                alert("Thank you for registering a new client")
+            });
 
             $("#clientregistryform").submit(function () {
                     console.log('enter');
@@ -71,6 +74,7 @@ $(document).ready(
                          success: function (result) {
                              console.log(result);
                              alert("Appointment added");
+                             $("#listAllAppointments").click();
                          },
                          failure: function (errorMessage) {
                              alert(errorMessage);

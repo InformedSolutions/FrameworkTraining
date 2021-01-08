@@ -29,6 +29,10 @@ $(document).ready(
 
         });
 
+            $("#submitClient").click(function() {
+                alert("Thank you for registering a new client")
+            });
+
             $("#clientregistryform").submit(function () {
                     console.log('enter');
                     event.preventDefault();
@@ -143,8 +147,6 @@ $(document).ready(
 
         }
         });
-
-        $("#listAllAppointments").click();
 
     });
 
