@@ -15,7 +15,7 @@ import com.informed.booking.Client;
 import com.informed.booking.Provider;
 
 @RestController
-@RequestMapping("booking")
+@RequestMapping(value = "booking",method={RequestMethod.DELETE, RequestMethod.GET, RequestMethod.POST})
 public class BookingSystemController {
 
     @Autowired
@@ -55,6 +55,12 @@ public class BookingSystemController {
     public List<Appointment> getProviderAppointments(@PathVariable int providerId) {
         System.out.println("BookingSystemController.getProviderAppointments(" + providerId + ")");
         return booker.getProviderAppointments(providerId);
+    }
+
+    @DeleteMapping("/appointment/delete/{id}")
+    public void deleteAppointment(@PathVariable int id) {
+        System.out.println("BookingSystemController.deleteAppointment(" + id + ")");
+        this.booker.deleteAppointment(booker.getAppointmentByID(id).orElse(null));
     }
 
     //Client Mappings

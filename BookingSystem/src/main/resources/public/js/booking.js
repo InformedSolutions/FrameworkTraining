@@ -70,6 +70,7 @@ $(document).ready(
                          success: function (result) {
                              console.log(result);
                              alert("Appointment added");
+                             $("#listAllAppointments").click();
                          },
                          failure: function (errorMessage) {
                              alert(errorMessage);
@@ -79,51 +80,6 @@ $(document).ready(
                      });
 
                  });
-
-        $("#listAllAppointments").click(function () {
-            console.log('listAllAppointments via jQuery');
-            event.preventDefault();
-
-            // GET via AJAX
-            $.get("http://localhost:8080/booking/appointmentList",
-                function (appointments) {
-                    $('#appTable').empty();
-                    console.log(appointments);
-                    let htmlTableHead = "<thead>";
-                    htmlTableHead += "<th> Client <th>";
-                    htmlTableHead += "<th> Provider <th>";
-                    htmlTableHead += "<th> Start Time<th>";
-                    htmlTableHead += "<th> End Time<th>";
-                    htmlTableHead += "<th> Cost<th>";
-                    htmlTableHead += "<th> Description<th>";
-                    htmlTableHead += "<th> Client Missed Appointment?<th>";
-                    htmlTableHead += "</thead>";
-                    $('#appTable').append(htmlTableHead);
-                    $('#appTable').append("<tbody>");
-                    $.each(appointments, function (i, appointment) {
-                        let html = "<tr>";
-                        html += "<th>" + appointment.client + " <th>";
-                        html += "<th>" + appointment.provider + " <th>";
-                        html += "<th>" + appointment.startDateTime + " <th>";
-                        html += "<th>" + appointment.endDateTime + " <th>";
-                        html += "<th>" + appointment.cost + " <th>";
-
-                        if (appointment.description != null) {
-                            html += "<th>" + appointment.description + " <th>";
-                        } else {
-                            html += "<th>  <th>";
-                        }
-
-                        html += "<th>" + appointment.hasClientMissedAppointments + " <th>";
-                        html += "</tr>";
-                        $('#appTable').append(html);
-                    });
-
-                    $('#appTable').append("</tbody>");
-
-                });
-
-        });
 
         $("#listClientAppointments").click(function () {
             console.log('listClientAppointments via jQuery');
@@ -153,8 +109,42 @@ $(document).ready(
                     var appointments
 
                     // GET via AJAX
-                    $.get("http://localhost:8080/booking/appointmentList", createTable(appointments));
+                    $.get("http://localhost:8080/booking/appointmentList", function(appointments){createTable(appointments)});
+
                 });
+
+        $("#deleteAppointment").click(function () {
+                    console.log('deleteAppointment via jQuery');
+                    event.preventDefault();
+
+                    // GET via AJAX
+                    $.get("http://localhost:8080/booking/appointment/delete/" + $('.rowSelected').data('value'),
+                    function(){
+                    $("#listAllAppointments").click();
+                    }
+                    );
+
+                });
+
+
+        $("#appTable").on("click", "tr", function() {
+
+        if($(this).hasClass("rowSelected")) {
+                                        console.log('deselected row via jQuery');
+                                        event.preventDefault();
+                                        $(this).removeClass("rowSelected");
+                                        $(this).addClass("rowNotSelected");
+        } else {
+                    console.log('selected row via jQuery');
+                    event.preventDefault();
+                            $(".rowSelected").removeClass("rowSelected");
+                            $(this).removeClass("rowNotSelected");
+                            $(this).addClass("rowSelected");
+
+        }
+        });
+
+        $("#listAllAppointments").click();
 
     });
 
@@ -175,7 +165,7 @@ function createTable(appointments) {
     $('#appTable').append(htmlTableHead);
     $('#appTable').append("<tbody>");
     $.each(appointments, function (i, appointment) {
-        let html = "<tr>";
+        let html = '<tr class="rowNotSelected" data-value="' + appointment.id +   '">';
         html += "<th>" + appointment.client + " <th>";
         html += "<th>" + appointment.provider + " <th>";
         html += "<th>" + appointment.startDateTime + " <th>";
