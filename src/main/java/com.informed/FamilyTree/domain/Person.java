@@ -124,14 +124,14 @@ public class Person {
     toString() {
         return "Person details{ " +
                 "personID: " + personID +
-                ", personName: '" + personName + '\'' +
-                ", sex: '" + sex + '\'' +
+                ", personName: " + personName +
+                ", sex: " + sex +
                 ", dob: " + dob +
                 ", birthPlace: " + birthPlace +
                 ", deathDate: " + deathDate +
                 ", deathPlace: " + deathPlace +
                 ", isMarried: " + isMarried +
                 ", hasChildren: " + hasChildren +
-                '}';
+                " }";
     }
 }

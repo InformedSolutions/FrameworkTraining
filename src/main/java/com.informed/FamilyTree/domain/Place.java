@@ -45,5 +45,13 @@ public class Place {
     public void setPlacePostcode(String placePostcode) {
         this.placePostcode = placePostcode;
     }
+
+    @Override
+    public String toString() {
+        return "Place{ " +
+                "placeID: " + placeID +
+                ", placeAddress: " + placeAddress +
+                ", placePostcode: " + placePostcode + " }";
+    }
 }
 
