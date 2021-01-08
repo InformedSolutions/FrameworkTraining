@@ -20,12 +20,12 @@ public class Person {
     private Date dob;
     @ManyToOne(fetch = FetchType.EAGER,
             cascade =  CascadeType.ALL)
-    @JoinColumn(name="birthPlaceId")
+    @JoinColumn(name="birth_place_id")
     private Place birthPlace;
     private Date deathDate;
     @ManyToOne(fetch = FetchType.EAGER,
             cascade =  CascadeType.ALL)
-    @JoinColumn(name="deathPlaceId")
+    @JoinColumn(name="death_place_id")
     private Place deathPlace;
     private boolean isMarried;
     private boolean hasChildren;
