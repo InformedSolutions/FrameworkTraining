@@ -38,6 +38,11 @@ public class FamilyTreeModel {
         }
         return allPersons;
     }
+
+    public void addPerson (Person person) {
+        System.out.println("FamilyTreeModel.addPerson( " + person + ")");
+        this.personRepo.savePerson(person);
+    }
     // Marriage DAO
     public List<Marriage> getAllMarriages() {
         System.out.println("FamilyTreeModel.getAllMarriages( " + marriages + ")");

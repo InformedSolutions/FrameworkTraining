@@ -21,7 +21,33 @@ $(document).ready(
                    .hide('slow')
                    .show('slow');
         });
-        //Set up some show list of persons
+        //Set up some Add Person functionality
+        $("#addPerson").submit(function () {
+            event.preventDefault();
+            let obj = $(this).serializeJSON();
+            let data = JSON.stringify(obj);
+            console.log(data);
+
+            // post function using ajax
+            $.ajax(
+                {
+                    type: "POST",
+                    url: "http://localhost:8080/FamilyTree/persons",
+                    data: data,
+                    success: function(result) {
+                        console.log(result);
+                        alert("Person updated");
+
+                    },
+                    failure: function(errorMessage) {
+                        alert(errorMessage)
+                    },
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json"
+                });
+        })
+
+        //Set up some show list of books behaviour
         $("#showPerson").click(
             function () {
                 console.log('running click on showAllPersons');
@@ -74,4 +100,5 @@ $(document).ready(
                         });
                       });
             });
+
 });
