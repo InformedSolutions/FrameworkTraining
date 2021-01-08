@@ -9,9 +9,9 @@ CREATE TABLE `familytree`.`person` (
   `personName` VARCHAR(45) NOT NULL,
   `sex` VARCHAR(45) NOT NULL,
   `dob` DATE NOT NULL,
-  `birthPlaceID` INT NOT NULL,
+  `birth_place_id` INT NOT NULL,
   `deathDate` DATE NULL,
-  `deathPlaceID` INT NULL,
+  `death_place_id` INT NULL,
   `isMarried` BOOLEAN NOT NULL DEFAULT false,
   `hasChildren` BOOLEAN NOT NULL DEFAULT false,
   PRIMARY KEY (`personID`));
